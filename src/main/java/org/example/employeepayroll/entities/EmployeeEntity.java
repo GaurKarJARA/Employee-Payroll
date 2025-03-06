@@ -1,11 +1,9 @@
 package org.example.employeepayroll.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
-    @Entity
+@Entity
+    @Table(name = "employees")
     public class EmployeeEntity {
 
         String name;
