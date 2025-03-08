@@ -1,39 +1,25 @@
 package org.example.employeepayroll.dto;
-    public class EmployeeDTO {
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import lombok.Setter;
+import lombok.Getter;
 
-        String name;
-        Long salary;
+@Getter
+@Setter
+public class EmployeeDTO {
 
-        Long id;
+    @NotBlank
+    @Pattern(regexp = "^[A-Z][a-zA-Z]{2,}( [A-Z][a-zA-Z]{2,})*$")
+    String name;
+    Long salary;
 
-        public EmployeeDTO(String name, Long salary) {
-            this.name = name;
-            this.salary = salary;
+    Long id;
 
-            this.id = null;
-        }
+    public EmployeeDTO(String name, Long salary) {
+        this.name = name;
+        this.salary = salary;
 
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public void setSalary(Long salary) {
-            this.salary = salary;
-        }
-
-        public void setId(Long id) {
-            this.id = id;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public Long getSalary() {
-            return salary;
-        }
-
-        public Long getId() {
-            return id;
-        }
+        this.id = null;
     }
+
+}

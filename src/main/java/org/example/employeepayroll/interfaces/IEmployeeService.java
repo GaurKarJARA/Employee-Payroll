@@ -8,11 +8,12 @@ import org.springframework.stereotype.Service;
 public interface IEmployeeService {
     public EmployeeDTO get(Long id);
 
-    public EmployeeDTO create(EmployeeDTO newEmp);
+    public EmployeeDTO create(EmployeeDTO newEmp) ;
 
     public EmployeeDTO edit(EmployeeDTO emp, Long id);
 
     public String delete(Long id);
 
+    public String clear();
 
 }
